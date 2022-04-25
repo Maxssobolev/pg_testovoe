@@ -10,13 +10,16 @@ export const handleLogin = createAsyncThunk(
           const user = users.find(({ login }) => login == userLogin)
           if (!user) {
 
-            reject('Такого пользователя нет')
+            return reject('Такого пользователя нет')
           }
           if (user?.password == userPassword) {
 
-            resolve(user)
+            return resolve(user)
           }
-        }, 500)
+
+          return reject('Неверный пароль')
+
+        }, process.env.REACT_APP_SERVER_DELAY)
     )
   }
 )

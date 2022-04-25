@@ -3,3 +3,16 @@
 @import './header.scss';
 @import './pages.scss';
 @import './forms.scss';
+
+
+.accordion {
+
+    &-button {
+        justify-content: center;
+        &:after {
+            display: none;
+        }
+    }
+
+    margin-bottom: 20px;
+}

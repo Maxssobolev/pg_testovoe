@@ -26,6 +26,18 @@
             }
         }
 
+        .moderateNews-wrapper {
+            .accordion-body {
+                @extend .page-news__cards-wrapper;
+            }
+            .card {
+                margin-bottom: 20px;
+                .btn-danger {
+                    margin-left: 20px;
+                }
+            }
+        }
+
     }
 
 
