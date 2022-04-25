@@ -1,0 +1,13 @@
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 10px 0;
+    align-items: center;
+
+    &__item {
+        text-align: right;
+        &_logo {
+            text-align: left;
+        }
+    }
+}

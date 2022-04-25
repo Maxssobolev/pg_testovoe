@@ -1,0 +1,34 @@
+.page {
+    margin-top: 20px;
+    padding: 0 15px;
+    &-main {}
+    &-news {
+        display: flex;
+        flex-direction: column;
+        &__cards-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+
+            @include if_size('800') {
+                grid-template-columns: 1fr;
+            }
+        }
+        .field_search {
+            align-self: flex-end;
+            margin-bottom: 30px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 0 15px;
+            &::placeholder {
+                font-weight: normal;
+
+            }
+        }
+
+    }
+
+
+    // common elements
+    .nothing-to-show {}
+}

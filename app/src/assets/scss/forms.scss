@@ -1,0 +1,71 @@
+.form {
+
+    &-login {
+        .field-wrapper {
+            width: 200px;
+            margin: 20px auto;
+        }
+        button[type="submit"] {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+
+.field-wrapper {
+    position: relative;
+
+    & > span {
+        position: absolute;
+        top: -75%;
+        left: 0;
+        font-size: 1rem;
+        color: var(--gray);
+        pointer-events: none;
+        &[dataerrors]::after {
+            content: ' ' attr(dataerrors) ' ';
+            background: #fff3cd;
+            margin-left: 0.25rem;
+            font-size: 0.7rem;
+            color: #664d03;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+        }
+    }
+
+
+}
+
+.field {
+    cursor: pointer;
+    font: inherit;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    height: 30px;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 0;
+
+    &_password {
+        &-wrapper {
+            position: relative;
+        }
+        &-eyeIcon {
+            cursor: pointer;
+            position: absolute;
+            right: 2%;
+            bottom: 5px;
+        }
+    }
+
+    &_search {
+        width: 300px;
+    }
+
+
+}
